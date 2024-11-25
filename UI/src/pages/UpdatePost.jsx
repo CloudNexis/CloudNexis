@@ -28,7 +28,7 @@ export default function UpdatePost() {
   useEffect(() => {
     try {
       const fetchPost = async () => {
-        const res = await fetch(`https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/post/getposts?postId=${postId}`);
+        const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/getposts?postId=${postId}`);
         const data = await res.json();
         if (!res.ok) {
           console.log(data.message);
@@ -86,7 +86,7 @@ export default function UpdatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/post/updatepost/${formData._id}/${currentUser._id}`, {
+      const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/updatepost/${formData._id}/${currentUser._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

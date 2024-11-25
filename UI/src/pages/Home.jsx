@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import CallToAction from '../components/CallToAction';
+//import CallToAction from '../components/CallToAction';
 import { useEffect, useState } from 'react';
 import PostCard from '../components/PostCard';
 
@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/post/getPosts');
+      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/getPosts');
       const data = await res.json();
       setPosts(data.posts);
     };
@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <div>
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
-        <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to my Blog</h1>
+        <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to CloudNexis</h1>
         <p className='text-gray-500 text-xs sm:text-sm'>
-          Here you'll find a variety of articles and tutorials on topics such as
-          web development, software engineering, and programming languages.
+        Here you'll find a variety of articles on topics such as
+        cloud computing, web development , programming languages.
         </p>
         <Link
           to='/search'
@@ -29,9 +29,9 @@ export default function Home() {
           View all posts
         </Link>
       </div>
-      <div className='p-3 bg-amber-100 dark:bg-slate-700'>
-        <CallToAction />
-      </div>
+      {/* <div className='p-3 bg-amber-100 dark:bg-slate-700'>
+       <CallToAction />
+      </div> */}
 
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7'>
         {posts && posts.length > 0 && (

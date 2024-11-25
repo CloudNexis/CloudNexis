@@ -61,8 +61,9 @@ export default function CreatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/post/create', {
+      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/create', {
         method: 'POST',
+        //credentials:'include',
         headers: {
           'Content-Type': 'application/json',
         },

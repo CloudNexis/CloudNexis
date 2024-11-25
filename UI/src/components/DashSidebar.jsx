@@ -27,7 +27,7 @@ export default function DashSidebar() {
   }, [location.search]);
   const handleSignout = async () => {
     try {
-      const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/user/signout', {
+      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/user/signout', {
         method: 'POST',
       });
       const data = await res.json();

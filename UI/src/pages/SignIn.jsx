@@ -24,7 +24,7 @@ export default function SignIn() {
     }
     try {
       dispatch(signInStart());
-      const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/auth/signin', {
+      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -48,13 +48,10 @@ export default function SignIn() {
         {/* left */}
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
-            <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-              Sahand's
-            </span>
-            Blog
+          <img src="logo.png" alt="Logo" class="logo" width="200" height="200"></img>
           </Link>
-          <p className='text-sm mt-5'>
-            This is a demo project. You can sign in with your email and password
+          <p className='text-md mt-5'>
+            Sign in with your email and password
             or with Google.
           </p>
         </div>

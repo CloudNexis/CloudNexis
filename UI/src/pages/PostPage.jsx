@@ -1,7 +1,7 @@
 import { Button, Spinner } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import CallToAction from '../components/CallToAction';
+//import CallToAction from '../components/CallToAction';
 import CommentSection from '../components/CommentSection';
 import PostCard from '../components/PostCard';
 
@@ -16,7 +16,7 @@ export default function PostPage() {
     const fetchPost = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/post/getposts?slug=${postSlug}`);
+        const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/getposts?slug=${postSlug}`);
         const data = await res.json();
         if (!res.ok) {
           setError(true);
@@ -39,7 +39,7 @@ export default function PostPage() {
   useEffect(() => {
     try {
       const fetchRecentPosts = async () => {
-        const res = await fetch(`https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/post/getposts?limit=3`);
+        const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/getposts?limit=3`);
         const data = await res.json();
         if (res.ok) {
           setRecentPosts(data.posts);
@@ -85,9 +85,9 @@ export default function PostPage() {
         className='p-3 max-w-2xl mx-auto w-full post-content'
         dangerouslySetInnerHTML={{ __html: post && post.content }}
       ></div>
-      <div className='max-w-4xl mx-auto w-full'>
+      {/* <div className='max-w-4xl mx-auto w-full'>
         <CallToAction />
-      </div>
+      </div> */}
       <CommentSection postId={post._id} />
 
       <div className='flex flex-col justify-center items-center mb-5'>

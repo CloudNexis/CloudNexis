@@ -26,7 +26,7 @@ export default function Header() {
 
   const handleSignout = async () => {
     try {
-      const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/user/signout', {
+      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/user/signout', {
         method: 'POST',
       });
       const data = await res.json();
@@ -54,10 +54,7 @@ export default function Header() {
         to='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-        <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-          Sahand's
-        </span>
-        Blog
+        <img src="logo.png" alt="Logo" class="logo" width="100" height="110"></img>
       </Link>
       <form onSubmit={handleSubmit}>
         <TextInput
@@ -73,14 +70,14 @@ export default function Header() {
         <AiOutlineSearch />
       </Button>
       <div className='flex gap-2 md:order-2'>
-        <Button
+        {/* <Button
           className='w-12 h-10 hidden sm:inline'
           color='gray'
           pill
           onClick={() => dispatch(toggleTheme())}
         >
           {theme === 'light' ? <FaSun /> : <FaMoon />}
-        </Button>
+        </Button> */}
         {currentUser ? (
           <Dropdown
             arrowIcon={false}

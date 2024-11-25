@@ -23,7 +23,7 @@ export default function DashboardComp() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/user/getusers?limit=5');
+        const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/user/getusers?limit=5');
         const data = await res.json();
         if (res.ok) {
           setUsers(data.users);
@@ -36,7 +36,7 @@ export default function DashboardComp() {
     };
     const fetchPosts = async () => {
       try {
-        const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/post/getposts?limit=5');
+        const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/getposts?limit=5');
         const data = await res.json();
         if (res.ok) {
           setPosts(data.posts);
@@ -49,7 +49,7 @@ export default function DashboardComp() {
     };
     const fetchComments = async () => {
       try {
-        const res = await fetch('https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/comment/getcomments?limit=5');
+        const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/getcomments?limit=5');
         const data = await res.json();
         if (res.ok) {
           setComments(data.comments);

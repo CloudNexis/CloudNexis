@@ -13,7 +13,7 @@ export default function DashComments() {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const res = await fetch(`https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/comment/getcomments`);
+        const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/getcomments`);
         const data = await res.json();
         if (res.ok) {
           setComments(data.comments);
@@ -34,7 +34,7 @@ export default function DashComments() {
     const startIndex = comments.length;
     try {
       const res = await fetch(
-        `https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/comment/getcomments?startIndex=${startIndex}`
+        `https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/getcomments?startIndex=${startIndex}`
       );
       const data = await res.json();
       if (res.ok) {
@@ -52,7 +52,7 @@ export default function DashComments() {
     setShowModal(false);
     try {
       const res = await fetch(
-        `https://vji2yo7o3e.execute-api.us-east-1.amazonaws.com/api/comment/deleteComment/${commentIdToDelete}`,
+        `https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/deleteComment/${commentIdToDelete}`,
         {
           method: 'DELETE',
         }

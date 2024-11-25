@@ -4,21 +4,23 @@ export default function About() {
       <div className='max-w-2xl mx-auto p-3 text-center'>
         <div>
           <h1 className='text-3xl font font-semibold text-center my-7'>
-            About Sahand' Blog
+            About CloudNexis
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              Welcome to Sahand's Blog! This blog was created by Sahand Ghavidel
-              as a personal project to share his thoughts and ideas with the
-              world. Sahand is a passionate developer who loves to write about
-              technology, coding, and everything in between.
+              Welcome to CloudNexis! This blog platform was created by Team 7
+              as a college project. CloudNexis is a forward-thinking platform 
+              centered around cloud-native microservices architecture, designed 
+              to provide scalable, resilient, and efficient solutions for modern enterprises. 
             </p>
 
             <p>
-              On this blog, you'll find weekly articles and tutorials on topics
-              such as web development, software engineering, and programming
-              languages. Sahand is always learning and exploring new
-              technologies, so be sure to check back often for new content!
+            Our platform ensures that each service operates independently while seamlessly 
+            integrating to deliver optimal performance.
+            At CloudNexis, we prioritize flexibility, enhanced security, and continuous 
+            innovation. Through our microservices ecosystem, we empower businesses 
+            to adapt quickly to changing demands, ensuring smooth operations and growth 
+            in an ever-evolving digital landscape.
             </p>
 
             <p>
@@ -26,6 +28,8 @@ export default function About() {
               other readers. You can like other people's comments and reply to
               them as well. We believe that a community of learners can help
               each other grow and improve.
+              Discover the future of cloud-native technology with CloudNexis—where 
+              every service is crafted to perform, adapt, and scale.
             </p>
           </div>
         </div>
