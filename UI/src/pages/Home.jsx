@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/post/getPosts');
+      const res = await fetch('https://5gd0a1l8ma.execute-api.us-east-1.amazonaws.com/api/post/getPosts');
       const data = await res.json();
       setPosts(data.posts);
     };

@@ -24,7 +24,7 @@ export default function SignIn() {
     }
     try {
       dispatch(signInStart());
-      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/auth/signin', {
+      const res = await fetch('https://3hv51yz0na.execute-api.us-east-1.amazonaws.com/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

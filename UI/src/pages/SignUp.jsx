@@ -19,7 +19,7 @@ export default function SignUp() {
     try {
       setLoading(true);
       setErrorMessage(null);
-      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/auth/signup', {
+      const res = await fetch('https://3hv51yz0na.execute-api.us-east-1.amazonaws.com/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

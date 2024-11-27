@@ -15,7 +15,7 @@ export default function OAuth() {
         provider.setCustomParameters({ prompt: 'select_account' })
         try {
             const resultsFromGoogle = await signInWithPopup(auth, provider)
-            const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/auth/google', {
+            const res = await fetch('https://3hv51yz0na.execute-api.us-east-1.amazonaws.com/api/auth/google', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

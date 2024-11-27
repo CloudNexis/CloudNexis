@@ -9,6 +9,7 @@ export default function CommentSection({ postId }) {
   const { currentUser } = useSelector((state) => state.user);
   const [comment, setComment] = useState('');
   const [commentError, setCommentError] = useState(null);
+  const [updateUserError, setUpdateUserError] = useState(null);
   const [comments, setComments] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [commentToDelete, setCommentToDelete] = useState(null);
@@ -19,7 +20,7 @@ export default function CommentSection({ postId }) {
       return;
     }
     try {
-      const res = await fetch('https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/create', {
+      const res = await fetch('https://2rdvo8rx82.execute-api.us-east-1.amazonaws.com/api/comment/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,16 +36,19 @@ export default function CommentSection({ postId }) {
         setComment('');
         setCommentError(null);
         setComments([data, ...comments]);
+      }else{
+        throw new Error(data.message)
       }
     } catch (error) {
       setCommentError(error.message);
+      setUpdateUserError(error.message)
     }
   };
 
   useEffect(() => {
     const getComments = async () => {
       try {
-        const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/getPostComments/${postId}`);
+        const res = await fetch(`https://2rdvo8rx82.execute-api.us-east-1.amazonaws.com/api/comment/getPostComments/${postId}`);
         if (res.ok) {
           const data = await res.json();
           setComments(data);
@@ -62,7 +66,7 @@ export default function CommentSection({ postId }) {
         navigate('/sign-in');
         return;
       }
-      const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/likeComment/${commentId}`, {
+      const res = await fetch(`https://2rdvo8rx82.execute-api.us-east-1.amazonaws.com/api/comment/likeComment/${commentId}`, {
         method: 'PUT',
       });
       if (res.ok) {
@@ -99,7 +103,7 @@ export default function CommentSection({ postId }) {
         navigate('/sign-in');
         return;
       }
-      const res = await fetch(`https://biyxn20rng.execute-api.us-east-1.amazonaws.com/api/comment/deleteComment/${commentId}`, {
+      const res = await fetch(`https://2rdvo8rx82.execute-api.us-east-1.amazonaws.com/api/comment/deleteComment/${commentId}`, {
         method: 'DELETE',
       });
       if (res.ok) {
